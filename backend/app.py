@@ -1,6 +1,7 @@
 from flask import Flask
 
 from routes import bp
+from db import get_conn
 
 def create_app():
     app = Flask(__name__)
@@ -8,6 +9,7 @@ def create_app():
     return app
 
 app = create_app()
+conn = get_conn()
 
 # Run once on startup
 
